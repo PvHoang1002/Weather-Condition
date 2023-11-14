@@ -42,5 +42,10 @@ def get_weather():
     )
 
 
+@app.route('/health')
+def health_check():
+    return 'OK'
+
+
 if __name__ == "__main__":
-    serve(app, host="0.0.0.0", port=5000)
+    serve(app, host="0.0.0.0", port=8000)
